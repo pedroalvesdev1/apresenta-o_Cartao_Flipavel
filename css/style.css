@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    background: linear-gradient(375deg, #0a6f74, #080f5e) no-repeat;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.caixaw {
+    width: 400px;
+    height: 410px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.caixaw .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.caixaw .frenteCartao {
+    transform: rotateY(0deg);
+}
+
+.caixaw .costasCartao {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.caixaw:hover>.frenteCartao {
+    transform: rotateY(-180deg);
+}
+
+.caixaw:hover>.costasCartao {
+    transform: rotateY(0deg);
+}
+
+
+.caixaw .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.caixaw .costasCartao img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(375deg, #0a6f74, #080f5e) no-repeat;
+    object-fit: cover;
+}
+
+.caixaw .card .info {
+    text-align: center;
+}
+
+.costasCartao .info .titulo {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.costasCartao ul {
+    display: flex;
+    padding: 0;
+}
+
+.costasCartao ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(375deg, #0a6f74, #080f5e) no-repeat;
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 38px;
+    margin: 0 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.costasCartao ul a:hover {
+    background: none;
+    color: #333;
+    border-color: #000;
+}
